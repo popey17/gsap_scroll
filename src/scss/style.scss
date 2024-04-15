@@ -1,0 +1,161 @@
+$gradiantBackground: linear-gradient(to bottom, #58acf4, #0b3075);
+
+body {
+  background: $gradiantBackground no-repeat center center fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 1800px;
+  .top {
+    width: object-fit;
+    height: 100vh;
+    .logo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;
+      z-index: 1000;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .frame {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .frameImg{
+        position: fixed;
+        height: 300px;
+        opacity: 1;
+        img {
+          height: 100%;
+          width: auto;
+          object-fit: cover;
+        }
+        &:nth-child(1) {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+        &:nth-child(3) {
+          right: 0;
+          top: 0;
+        }
+        &:nth-child(4) {
+          left: 0;
+          top: 0;
+        }
+        &:nth-child(5) {
+          left: 25%;
+          top: 0;
+        }
+        &:nth-child(6) {
+          right: 25%;
+          top: 0;
+        }
+        &:nth-child(7) {
+          left: 0;
+          bottom: 0;
+        }
+        &:nth-child(8) {
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+        }
+        &:nth-child(9) {
+          right: 0%;
+          bottom: 0;
+
+        }
+      }
+    }
+  }
+  .overlay {
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    .percentage {
+      position: absolute;
+      bottom: 10%;
+      right: 50px;
+      width: 500px;
+      .percentImg {
+        position: absolute;
+        top: -160px;
+        right: 0;
+        width: 150px;
+        margin: 0;
+        animation: boat 5s infinite;
+        transition: all ease-in-out;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      .percentagebar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 30px;
+        background: #58acf4;
+        clip-path: polygon(100% 100%, 0% 100% , 0.00% 59.62%, 2.00% 58.43%, 4.00% 55.15%, 6.00% 50.60%, 8.00% 45.91%, 10.00% 42.22%, 12.00% 40.46%, 14.00% 41.06%, 16.00% 43.87%, 18.00% 48.20%, 20.00% 52.97%, 22.00% 57.01%, 24.00% 59.31%, 26.00% 59.31%, 28.00% 57.01%, 30.00% 52.97%, 32.00% 48.20%, 34.00% 43.87%, 36.00% 41.06%, 38.00% 40.46%, 40.00% 42.22%, 42.00% 45.91%, 44.00% 50.60%, 46.00% 55.15%, 48.00% 58.43%, 50.00% 59.62%, 52.00% 58.43%, 54.00% 55.15%, 56.00% 50.60%, 58.00% 45.91%, 60.00% 42.22%, 62.00% 40.46%, 64.00% 41.06%, 66.00% 43.87%, 68.00% 48.20%, 70.00% 52.97%, 72.00% 57.01%, 74.00% 59.31%, 76.00% 59.31%, 78.00% 57.01%, 80.00% 52.97%, 82.00% 48.20%, 84.00% 43.87%, 86.00% 41.06%, 88.00% 40.46%, 90.00% 42.22%, 92.00% 45.91%, 94.00% 50.60%, 96.00% 55.15%, 98.00% 58.43%, 100.00% 59.62%);      
+      }
+      .count {
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        left: -100px;
+      }
+    }
+  }
+  .second {
+    position: relative;
+    .frameImg {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      height: 800px;
+      opacity: 0;
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+@keyframes boat {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
